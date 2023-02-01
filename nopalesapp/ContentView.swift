@@ -7,20 +7,33 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SplashView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            
+            
+            Color(.black)
+                .ignoresSafeArea()
+            VStack{
+                Image("bizboys")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                
+                //Text("On The Block")
+                    //.padding()
+                    //.foregroundColor(.brown)
+                
+                
+            }
         }
-        .padding()
+        
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SplashView()
     }
 }
