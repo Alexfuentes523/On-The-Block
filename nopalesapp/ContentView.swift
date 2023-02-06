@@ -4,36 +4,43 @@
 //
 //  Created by Cameron Johnson on 1/31/23.
 //
-
 import SwiftUI
 
-struct SplashView: View {
+struct ContentView: View {
     var body: some View {
-        ZStack{
-            
-            
-            Color(.black)
+        
+        ZStack {
+            Color(.gray)
+                .scaledToFill()
                 .ignoresSafeArea()
-            VStack{
-                Image("bizboys")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
+            VStack {
+            
+                HStack{
+                    Image("blm Barber")
+                        .padding()
+                        .scaledToFit()
+                        .offset(x: -10 ,y: 50)
+                    Image("dime")
+                        .padding()
+                        .scaledToFit()
+                }
+                HStack {
+                    Image("thecity")
+                        .padding()
+                    Image("")
+                }
                 
-                //Text("On The Block")
-                    //.padding()
-                    //.foregroundColor(.brown)
                 
                 
             }
+            
         }
-        
         
     }
 }
 
-struct SplashView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        ContentView()
     }
 }
