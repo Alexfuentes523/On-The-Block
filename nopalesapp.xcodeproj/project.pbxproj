@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E9C2C0298D4F1300B58776 /* Button Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9C2BF298D4F1300B58776 /* Button Screen.swift */; };
 		1F35B7F529895AAD00772065 /* nopalesappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B7F429895AAD00772065 /* nopalesappApp.swift */; };
 		1F35B7F729895AAD00772065 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B7F629895AAD00772065 /* ContentView.swift */; };
 		1F35B7F929895AAE00772065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F35B7F829895AAE00772065 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09E9C2BF298D4F1300B58776 /* Button Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button Screen.swift"; sourceTree = "<group>"; };
 		1F35B7F129895AAD00772065 /* nopalesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nopalesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F35B7F429895AAD00772065 /* nopalesappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nopalesappApp.swift; sourceTree = "<group>"; };
 		1F35B7F629895AAD00772065 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +100,8 @@
 			children = (
 				1F35B7F429895AAD00772065 /* nopalesappApp.swift */,
 				1F35B7F629895AAD00772065 /* ContentView.swift */,
-				1F35B824298ACE7800772065 /* Business.swift */,
+				1F35B822298974CC00772065 /* MainView.swift */,
+				09E9C2BF298D4F1300B58776 /* Button Screen.swift */,
 				1F35B7F829895AAE00772065 /* Assets.xcassets */,
 				1F35B7FA29895AAE00772065 /* Preview Content */,
 			);
@@ -262,6 +265,8 @@
 			files = (
 				1F35B825298ACE7800772065 /* Business.swift in Sources */,
 				1F35B7F729895AAD00772065 /* ContentView.swift in Sources */,
+				1F35B823298974CC00772065 /* MainView.swift in Sources */,
+				09E9C2C0298D4F1300B58776 /* Button Screen.swift in Sources */,
 				1F35B7F529895AAD00772065 /* nopalesappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
