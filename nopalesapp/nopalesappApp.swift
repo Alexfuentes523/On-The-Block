@@ -11,7 +11,6 @@ import SwiftUI
 struct nopalesappApp: App {
     var body: some Scene {
         WindowGroup {
-            ButtonScreen()
             ContentView()
         }
     }

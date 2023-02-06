@@ -45,7 +45,7 @@ struct ButtonScreen: View {
                 }
     }
 }
-struct ContentView_Previews: PreviewProvider {
+struct ButtonScreen_Previews: PreviewProvider {
     static var previews: some View {
         ButtonScreen()
     }
