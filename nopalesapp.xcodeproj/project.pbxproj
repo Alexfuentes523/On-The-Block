@@ -16,6 +16,7 @@
 		1F35B81029895AAF00772065 /* nopalesappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B80F29895AAF00772065 /* nopalesappUITests.swift */; };
 		1F35B81229895AAF00772065 /* nopalesappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B81129895AAF00772065 /* nopalesappUITestsLaunchTests.swift */; };
 		9D068290299154BC0081C8D4 /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06828F299154BC0081C8D4 /* BusinessView.swift */; };
+		ABADF73B2992B92A00D2F0E1 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADF73A2992B92A00D2F0E1 /* SearchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1F35B80F29895AAF00772065 /* nopalesappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nopalesappUITests.swift; sourceTree = "<group>"; };
 		1F35B81129895AAF00772065 /* nopalesappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nopalesappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9D06828F299154BC0081C8D4 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
+		ABADF73A2992B92A00D2F0E1 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				1F35B7F429895AAD00772065 /* nopalesappApp.swift */,
 				1F35B7F629895AAD00772065 /* ContentView.swift */,
 				09E9C2BF298D4F1300B58776 /* Button Screen.swift */,
+				ABADF73A2992B92A00D2F0E1 /* SearchScreen.swift */,
 				9D06828F299154BC0081C8D4 /* BusinessView.swift */,
 				1F35B7F829895AAE00772065 /* Assets.xcassets */,
 				1F35B7FA29895AAE00772065 /* Preview Content */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D068290299154BC0081C8D4 /* BusinessView.swift in Sources */,
+				ABADF73B2992B92A00D2F0E1 /* SearchScreen.swift in Sources */,
 				1F35B7F729895AAD00772065 /* ContentView.swift in Sources */,
 				09E9C2C0298D4F1300B58776 /* Button Screen.swift in Sources */,
 				1F35B7F529895AAD00772065 /* nopalesappApp.swift in Sources */,
