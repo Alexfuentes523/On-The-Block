@@ -31,17 +31,11 @@ struct BusinessView: View {
                         .resizable()
                         .frame(width: 420, height: 800)
                     
-                    VStack {
-                        Text("Here at Nickel Store we treat every customer and employee with respect and encourage a positive envioroment. We are a team of 12 and are always looking for new ways to help impact the community through good eats!! ")
-                            .bold()
+                    HStack {
+                        Image("Rest2")
+                            .frame(width: 210)
                             .padding()
-                        
-                        Image("Rest4")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 420)
-                            .cornerRadius(8)
-//                            .padding()
+                        Text("Dime store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with dimes as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage. ")
                     }
                     
                     //                    Map View under all business information
@@ -50,6 +44,9 @@ struct BusinessView: View {
                         .border(.black)
                         .cornerRadius(8)
                     
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.black)
                     //                    Hyperlinks under map in an HStack
                     HStack {
 //                        Globe symbol
@@ -64,7 +61,10 @@ struct BusinessView: View {
                         ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
                             .frame(width: 175, height: 70)
                             .foregroundColor(.black)
-                    }.border(.black)
+                    }
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.black)
                     
                 }
             }
