@@ -16,6 +16,7 @@
 		1F35B80629895AAF00772065 /* nopalesappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B80529895AAF00772065 /* nopalesappTests.swift */; };
 		1F35B81029895AAF00772065 /* nopalesappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B80F29895AAF00772065 /* nopalesappUITests.swift */; };
 		1F35B81229895AAF00772065 /* nopalesappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B81129895AAF00772065 /* nopalesappUITestsLaunchTests.swift */; };
+		1F699DC72992D28100279A5F /* PinterestGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F699DC62992D28100279A5F /* PinterestGrid.swift */; };
 		9D068290299154BC0081C8D4 /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06828F299154BC0081C8D4 /* BusinessView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		1F35B80B29895AAF00772065 /* nopalesappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nopalesappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F35B80F29895AAF00772065 /* nopalesappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nopalesappUITests.swift; sourceTree = "<group>"; };
 		1F35B81129895AAF00772065 /* nopalesappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nopalesappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1F699DC62992D28100279A5F /* PinterestGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestGrid.swift; sourceTree = "<group>"; };
 		9D06828F299154BC0081C8D4 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 			children = (
 				1F35B7F429895AAD00772065 /* nopalesappApp.swift */,
 				1F35B7F629895AAD00772065 /* ContentView.swift */,
+				1F699DC62992D28100279A5F /* PinterestGrid.swift */,
 				09E9C2BF298D4F1300B58776 /* Button Screen.swift */,
 				094465D62991643200F5D5C8 /* other code.swift */,
 				9D06828F299154BC0081C8D4 /* BusinessView.swift */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F699DC72992D28100279A5F /* PinterestGrid.swift in Sources */,
 				9D068290299154BC0081C8D4 /* BusinessView.swift in Sources */,
 				1F35B7F729895AAD00772065 /* ContentView.swift in Sources */,
 				094465D72991643200F5D5C8 /* other code.swift in Sources */,
