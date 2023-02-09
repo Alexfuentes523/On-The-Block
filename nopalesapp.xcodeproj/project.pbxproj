@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090927D42995364D00D718FF /* Verify Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090927D32995364D00D718FF /* Verify Screen.swift */; };
 		094465D72991643200F5D5C8 /* other code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094465D62991643200F5D5C8 /* other code.swift */; };
 		09E9C2C0298D4F1300B58776 /* Button Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9C2BF298D4F1300B58776 /* Button Screen.swift */; };
 		1F35B7F529895AAD00772065 /* nopalesappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35B7F429895AAD00772065 /* nopalesappApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090927D32995364D00D718FF /* Verify Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Verify Screen.swift"; sourceTree = "<group>"; };
 		094465D62991643200F5D5C8 /* other code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "other code.swift"; sourceTree = "<group>"; };
 		09E9C2BF298D4F1300B58776 /* Button Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button Screen.swift"; sourceTree = "<group>"; };
 		1F35B7F129895AAD00772065 /* nopalesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nopalesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			children = (
 				1F35B7F429895AAD00772065 /* nopalesappApp.swift */,
 				1F35B7F629895AAD00772065 /* ContentView.swift */,
+				090927D32995364D00D718FF /* Verify Screen.swift */,
 				1F699DC62992D28100279A5F /* PinterestGrid.swift */,
 				09E9C2BF298D4F1300B58776 /* Button Screen.swift */,
 				094465D62991643200F5D5C8 /* other code.swift */,
@@ -278,6 +281,7 @@
 				1F699DC72992D28100279A5F /* PinterestGrid.swift in Sources */,
 				9D068290299154BC0081C8D4 /* BusinessView.swift in Sources */,
 				1F35B7F729895AAD00772065 /* ContentView.swift in Sources */,
+				090927D42995364D00D718FF /* Verify Screen.swift in Sources */,
 				9DB669962992B2F60024B5B7 /* EditBusinessView.swift in Sources */,
 				9DB669982993EA140024B5B7 /* ImagePicker.swift in Sources */,
 				094465D72991643200F5D5C8 /* other code.swift in Sources */,
