@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct VerifyScreeenView: View {
+struct VerifyScreenView: View {
     @State var FullName: String = ""
     @State var BusinessName: String = ""
     @State var BusinessEmail: String = ""
