@@ -85,7 +85,7 @@ struct VerifyScreenView: View {
                             
     struct VerifyScreen_Previews: PreviewProvider {
         static var previews: some View {
-            VerifyScreeenView()
+            VerifyScreenView()
         }
     }
 
