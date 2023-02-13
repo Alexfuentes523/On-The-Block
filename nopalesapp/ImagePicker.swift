@@ -46,6 +46,7 @@ extension ImagePicker {
 //    Here is where we get the image
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//            This might be where the problem is
             guard let image = info[.originalImage] as? UIImage else { return }
             parent.selectedImage = image
             parent.presentationMode.wrappedValue.dismiss()

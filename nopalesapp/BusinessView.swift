@@ -25,7 +25,7 @@ struct BusinessView: View {
                     
                     //                All business info and pictures
                     VStack {
-      
+                        
                         Spacer()
                         Image("dime")
                             .resizable()
@@ -70,17 +70,17 @@ struct BusinessView: View {
                         
                     }
                     
-//                    Navigation Title
+                    //                    Navigation Title
                     
                 }.navigationBarTitle("On The Block", displayMode: .inline)
-                .accessibilityAddTraits(.isHeader)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Dime Store")
-                            .font(.largeTitle)
-                            .accessibilityAddTraits(.isHeader)
+                    .accessibilityAddTraits(.isHeader)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Dime Store")
+                                .font(.largeTitle)
+                                .accessibilityAddTraits(.isHeader)
+                        }
                     }
-                }
             }
         }
     }
