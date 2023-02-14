@@ -25,9 +25,12 @@ struct EditBusinessView: View {
     @State private var profileImage: Image?
     @State private var profileImage2: Image?
     
-//    Text variables
+    //    Text variables
     @State private var title = ""
     @State private var bio = ""
+    
+    //    TextField Strings
+    @State var reviews: String = ""
     
     
     var body: some View {
@@ -132,24 +135,37 @@ struct EditBusinessView: View {
                         Divider()
                             .frame(height: 1)
                             .overlay(.black)
+                        Spacer()
                         
                         
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 3)
+                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
+                                .frame(width: 420, height: 150)
+                            
+                            VStack {
+                                Text("Leave a review!!")
+                                    .foregroundColor(.white)
+                                TextField("", text: $reviews, axis: .vertical)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .padding()
+                            }
+                        }
                     }
-                    
-                }
-                .navigationBarTitle("Dime Store", displayMode: .inline)
-                .accessibilityAddTraits(.isHeader)
-                .navigationTitle($title)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Add name here")
-                            .navigationTitle($title)
-                            .navigationBarTitleDisplayMode(.inline)
-                            .font(.largeTitle)
-                            .accessibilityAddTraits(.isHeader)
+                }.navigationBarTitle("Dime Store", displayMode: .inline)
+                    .accessibilityAddTraits(.isHeader)
+                    .navigationTitle($title)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Add name here")
+                                .navigationTitle($title)
+                                .navigationBarTitleDisplayMode(.inline)
+                                .font(.largeTitle)
+                                .accessibilityAddTraits(.isHeader)
+                            
+                        }
                     }
-                }
             }
         }
     }
