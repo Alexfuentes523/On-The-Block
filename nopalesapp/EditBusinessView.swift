@@ -10,8 +10,28 @@ import SwiftUI
 
 struct EditBusinessView: View {
     
+    //    Background color
     var eggShell = #colorLiteral(red: 0.9302913547, green: 0.9253246188, blue: 0.916793704, alpha: 1)
+    
+    //    Map Variable
     @State private var region =  MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 42.3309, longitude: -83.0479), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
+    //    Button Variables
+    @State private var showImagePicker = false
+    @State private var showImagePicker2 = false
+    @State private var selectedImage: UIImage?
+    @State private var selectedImages = [UIImage]()
+    @State private var selectedImage2: UIImage?
+    @State private var profileImage: Image?
+    @State private var profileImage2: Image?
+    
+    //    Text variables
+    @State private var title = ""
+    @State private var bio = ""
+    
+    //    TextField Strings
+    @State var reviews: String = ""
+    
     
     var body: some View {
         
@@ -20,39 +40,148 @@ struct EditBusinessView: View {
             Color(eggShell)
                 .ignoresSafeArea()
             
-            ScrollView {
+            NavigationStack {
                 
-                VStack {
+                ScrollView {
                     
-                    Text("Insert name")
-                        .font(.system(size: 40))
-                        .padding()
-                    
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(.gray)
-                        .frame(width: 420, height: 800)
-                    
-                    
-                    HStack {
+                    VStack {
                         
-                     RoundedRectangle(cornerRadius: 8)
-                            .foregroundColor(.gray)
-                            .frame(width: 210, height: 300)
-                            .position(x: 95, y: 153)
-                            .padding()
+                        //                    Editable text
+                        //                        Text("Enter name here")                                .font(.system(size: 40))
+                        //                            .padding()
                         
-                        Text("Dime store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with dimes as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage.")
-                            .padding()
+                        
+                        //                    Image Picker Button // makes the photos editable
+                        
+                        Spacer()
+                        Button {
+                            showImagePicker.toggle()
+                        } label: {
+                            if let profileImage = profileImage {
+                                profileImage
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 420, height: 800)
+                                    .border(.black)
+                                    .clipShape(RoundedRectangle(cornerRadius: 3))
+                            } else {
+                                RoundedRectangle(cornerRadius: 3)
+                                    .foregroundColor(.gray)
+                                    .frame(width: 420, height: 800)
+                            }
+                        }
+                        .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                            ImagePicker(selectedImage: $selectedImage)
+                        }
+                        
+                        
+                        
+                        //                    Second Image Picker Button // makes second photo editable
+                        HStack {
+                            
+                            Button {
+                                showImagePicker.toggle()
+                            } label: {
+                                if let profileImage = profileImage2 {
+                                    profileImage
+                                        .resizable()
+                                        .frame(width: 210, height: 300)
+                                        .border(.black)
+                                        .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        .position(x: 95, y: 153)
+                                        .padding()
+                                } else {
+                                    RoundedRectangle(cornerRadius: 3)
+                                        .foregroundColor(.gray)
+                                        .frame(width: 210, height: 300)
+                                        .position(x: 95, y: 153)
+                                        .padding()
+                                }
+                            }
+                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
+                                ImagePicker(selectedImage: $selectedImage2)
+                            }
+                            VStack {
+                                TextField("Add a bio", text: $bio, axis: .vertical)
+                                    .padding()
+                            }
+                            
+                        }
+                        
+                        Map(coordinateRegion: $region)
+                            .frame(width: 420, height: 180)
+                            .border(.black)
+                            .cornerRadius(8)
+                        
+                        Divider()
+                            .frame(height: 1)
+                            .overlay(.black)
+                        
+                        HStack {
+                            //                        Globe symbol
+                            Link(destination: URL(string: "https://www.eatdimestore.com")!, label: {
+                                Image(systemName: "network")
+                                    .resizable()
+                                    .frame(width: 70, height: 70)
+                                    .foregroundColor(.black)
+                                    .padding()
+                            })
+                            //                        Share symbol
+                            ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
+                                .frame(width: 175, height: 70)
+                                .foregroundColor(.black)
+                        }
+                        
+                        Divider()
+                            .frame(height: 1)
+                            .overlay(.black)
+                        Spacer()
+                        
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 3)
+                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
+                                .frame(width: 420, height: 150)
+                            
+                            VStack {
+                                Text("Leave a review!!")
+                                    .foregroundColor(.white)
+                                TextField("", text: $reviews, axis: .vertical)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .padding()
+                            }
+                        }
                     }
-                    
-                    Map(coordinateRegion: $region)
-                        .frame(width: 420, height: 180)
-                        .border(.black)
-                        .cornerRadius(8)
-                }
+                }.navigationBarTitle("Dime Store", displayMode: .inline)
+                    .accessibilityAddTraits(.isHeader)
+                    .navigationTitle($title)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Add name here")
+                                .navigationTitle($title)
+                                .navigationBarTitleDisplayMode(.inline)
+                                .font(.largeTitle)
+                                .accessibilityAddTraits(.isHeader)
+                            
+                        }
+                    }
             }
         }
     }
+    
+    //    Func that loads image in place of original template/picture
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        profileImage = Image(uiImage: selectedImage)
+    }
+    
+    //    Second image loading func
+    func loadImage2() {
+        guard let selectedImage = selectedImage2 else { return }
+        profileImage2 = Image(uiImage: selectedImage)
+    }
+    
 }
 
 struct EditBusinessView_Previews: PreviewProvider {
@@ -60,3 +189,5 @@ struct EditBusinessView_Previews: PreviewProvider {
         EditBusinessView()
     }
 }
+
+
