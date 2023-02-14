@@ -7,14 +7,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    let gridItems = [
-        GridItem(height:450, imgString: "BLM Barber"),
-        GridItem(height:250, imgString: "detroitvseverybody"),
-        GridItem(height:200, imgString: "dime"),
-        GridItem(height:320, imgString: "thecity"),
-        GridItem(height:450, imgString: "warehouse"),
-        GridItem(height:450, imgString: "women"),
-    ]
+//    let gridItems = [
+//        CamGridItem(height:450, imgString: "BLM Barber"),
+//        CamGridItem(height:250, imgString: "detroitvseverybody"),
+//        CamGridItem(height:300, imgString: "dime"),
+//        CamGridItem(height:320, imgString: "thecity"),
+//        CamGridItem(height:750, imgString: "warehouse"),
+//        CamGridItem(height:450, imgString: "women"),
+//        CamGridItem(height:450, imgString: "storefront1"),
+//        CamGridItem(height:250, imgString: "storefront2"),
+//        CamGridItem(height:200, imgString: "storefront3"),
+//        CamGridItem(height:220, imgString: "storefront4"),
+//        CamGridItem(height:450, imgString: "storefront5"),
+//        CamGridItem(height:450, imgString: "storefront6")
+//        
+//    ]
     var body: some View {
         NavigationView {
             
@@ -49,7 +56,7 @@ struct ContentView: View {
                     
                 }
                 
-                ScrollView(.horizontal) {
+                ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .center, spacing: 25) {
                         VStack {
                             Image(systemName: "cup.and.saucer.fill")
@@ -111,11 +118,12 @@ struct ContentView: View {
                     
                 }
                     
-                ScrollView {
-                                        PinterestGrid(gridItems: gridItems, numOfColumns: 2,
-                                                      spacing: 13, horizontalPadding: 10)
+                ScrollView(showsIndicators: false) {
+                    CoryGrid()
+                        
+                                        
 
-                    
+
                 }
                 
             }
