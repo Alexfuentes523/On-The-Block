@@ -10,7 +10,12 @@ import SwiftUI
 struct BusinessView: View {
     
     var eggShell = #colorLiteral(red: 0.9302913547, green: 0.9253246188, blue: 0.916793704, alpha: 1)
+    
+//    Map Code
     @State private var region =  MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 42.3309, longitude: -83.0479), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
+//    TextField Strings
+    @State var reviews: String = ""
     
     var body: some View {
         
@@ -67,6 +72,21 @@ struct BusinessView: View {
                         Divider()
                             .frame(height: 1)
                             .overlay(.black)
+                        Spacer()
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 3)
+                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
+                                .frame(width: 420, height: 150)
+                            
+                            VStack {
+                                Text("Leave a review!!")
+                                    .foregroundColor(.white)
+                                TextField("", text: $reviews, axis: .vertical)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .padding()
+                            }
+                        }
                         
                     }
                     
