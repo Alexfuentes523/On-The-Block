@@ -152,24 +152,24 @@ struct EditBusinessView: View {
                             }
                         }
                     }
-                }.navigationBarTitle("Dime Store", displayMode: .inline)
-                    .accessibilityAddTraits(.isHeader)
+                }.accessibilityAddTraits(.isHeader)
                     .navigationTitle($title)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Text("Add name here")
-                                .navigationTitle($title)
-                                .navigationBarTitleDisplayMode(.inline)
-                                .font(.largeTitle)
-                                .accessibilityAddTraits(.isHeader)
-                            
+                        if title.isEmpty || title == " " {
+                            ToolbarItem(placement: .principal) {
+                                Text("Add name here")
+                                    .navigationTitle($title)
+                                    .navigationBarTitleDisplayMode(.inline)
+                                    .font(.largeTitle)
+                                    .accessibilityAddTraits(.isHeader)
+                                
+                            }
                         }
                     }
             }
         }
     }
-    
     //    Func that loads image in place of original template/picture
     func loadImage() {
         guard let selectedImage = selectedImage else { return }
