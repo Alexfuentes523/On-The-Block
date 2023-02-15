@@ -48,9 +48,17 @@ struct ContentView: View {
                 HStack(alignment: .center, spacing: 50) {
                     Image(systemName: "plus")
                         .padding()
-                    Text("ON THE BLOCK")
-                        .font(.headline)
-                        .padding()
+                    
+//                    Nav Link that goes to edit business view
+                    NavigationLink {
+                        EditBusinessView()
+                    } label: {
+                        Text("ON THE BLOCK")
+                            .foregroundColor(.black)
+                            .font(.headline)
+                            .padding()
+                    }
+                   
                     Image(systemName:"magnifyingglass")
                         .padding()
                     
