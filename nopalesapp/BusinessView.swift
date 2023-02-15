@@ -24,7 +24,14 @@ struct BusinessView: View {
             Color(eggShell)
                 .ignoresSafeArea()
             
-            NavigationStack {
+            VStack {
+                
+                HStack(alignment: .center, spacing: 50) {
+                    Text("Dime Store")
+                        .font(.system(size: 33))                        .foregroundColor(.black)
+                        .font(.headline)
+//                        .padding()
+                }
                 
                 ScrollView {
                     
@@ -35,12 +42,14 @@ struct BusinessView: View {
                         Image("dime")
                             .resizable()
                             .frame(width: 420, height: 800)
-                        
+                            .padding(.bottom)
                         HStack {
-                            Image("Rest2")
-                                .frame(width: 210)
-                                .padding()
+//                            Image("Rest2")
+//                                .frame(width: 210)
+//                                .padding()
+                           
                             Text("Dime store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with dimes as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage. ")
+                                .padding(.bottom)
                         }
                         
                         //                    Map View under all business information
@@ -87,20 +96,17 @@ struct BusinessView: View {
                                     .padding()
                             }
                         }
-                        
                     }
-                    
-                    //                    Navigation Title
-                    
-                }.navigationBarTitle("On The Block", displayMode: .inline)
-                    .accessibilityAddTraits(.isHeader)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Text("Dime Store")
-                                .font(.largeTitle)
-                                .accessibilityAddTraits(.isHeader)
-                        }
-                    }
+                }
+//                .navigationBarTitle("On The Block", displayMode: .inline)
+//                    .accessibilityAddTraits(.isHeader)
+//                    .toolbar {
+//                        ToolbarItem(placement: .principal) {
+//                            Text("Dime Store")
+//                                .font(.largeTitle)
+//                                .accessibilityAddTraits(.isHeader)
+//                        }
+//                    }
             }
         }
     }
