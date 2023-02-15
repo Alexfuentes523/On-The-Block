@@ -46,14 +46,8 @@ struct EditBusinessView: View {
                     
                     VStack {
                         
-                        //                    Editable text
-                        //                        Text("Enter name here")                                .font(.system(size: 40))
-                        //                            .padding()
-                        
-                        
-                        //                    Image Picker Button // makes the photos editable
-                        
                         Spacer()
+                        
                         Button {
                             showImagePicker.toggle()
                         } label: {
