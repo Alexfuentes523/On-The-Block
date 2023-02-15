@@ -40,7 +40,26 @@ struct EditBusinessView: View {
             Color(eggShell)
                 .ignoresSafeArea()
             
-            NavigationStack {
+         VStack {
+             
+             HStack(alignment: .center, spacing: 50) {
+                 Image(systemName: "plus")
+                     .padding()
+                 
+//                    Nav Link that goes to edit business view
+                 NavigationLink {
+                     EditBusinessView()
+                 } label: {
+                     Text("ON THE BLOCK")
+                         .foregroundColor(.black)
+                         .font(.headline)
+                         .padding()
+                 }
+                
+                 Image(systemName:"magnifyingglass")
+                     .padding()
+                 
+             }
                 
                 ScrollView {
                     

@@ -38,15 +38,11 @@ struct ContentView: View {
             Color(eggShell)
                 .ignoresSafeArea()
             
-            
-            
-            
-            
-            
             VStack {
                 
                 HStack(alignment: .center, spacing: 50) {
                     Image(systemName: "plus")
+                        .foregroundColor(.black)
                         .padding()
                     
 //                    Nav Link that goes to edit business view
@@ -60,6 +56,7 @@ struct ContentView: View {
                     }
                    
                     Image(systemName:"magnifyingglass")
+                        .foregroundColor(.black)
                         .padding()
                     
                 }
@@ -68,55 +65,71 @@ struct ContentView: View {
                     HStack(alignment: .center, spacing: 25) {
                         VStack {
                             Image(systemName: "cup.and.saucer.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Coffee Shop")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         VStack {
                             Image(systemName: "cup.and.saucer.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Coffee Shop")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         VStack {
                             Image(systemName: "cup.and.saucer.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Coffee Shop")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         .padding(0.4)
                         VStack {
                             Image(systemName: "birthday.cake.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Desserts")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         .padding(0.4)
                         VStack {
                             Image(systemName: "eyebrow")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Salon")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         .padding(0.4)
                         VStack {
                             Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Takeout")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         .padding(0.4)
                         VStack {
                             Image(systemName: "wrench.adjustable.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Repair")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         .padding(0.4)
                         VStack {
                             Image(systemName: "fork.knife.circle.fill")
+                                .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
                             Text("Restaruant")
+                                .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
                         
