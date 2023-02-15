@@ -48,13 +48,10 @@ struct EditBusinessView: View {
 //                    Nav Link that goes to edit business view
                  
                      TextField("Business Name Here", text: $buttonText)
+                     .font(.system(size: 33))
                          .foregroundColor(.black)
                          .font(.headline)
                          .padding()
-//
-//                 Button(self.buttonText) {
-//
-//                 }
              }
                 
                 ScrollView {
@@ -81,37 +78,38 @@ struct EditBusinessView: View {
                         }
                         .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
                             ImagePicker(selectedImage: $selectedImage)
-                        }
+                        }   .padding(.bottom)
                         
                         
                         
                         //                    Second Image Picker Button // makes second photo editable
                         HStack {
                             
-                            Button {
-                                showImagePicker.toggle()
-                            } label: {
-                                if let profileImage = profileImage2 {
-                                    profileImage
-                                        .resizable()
-                                        .frame(width: 210, height: 300)
-                                        .border(.black)
-                                        .clipShape(RoundedRectangle(cornerRadius: 3))
-                                        .position(x: 95, y: 153)
-                                        .padding()
-                                } else {
-                                    RoundedRectangle(cornerRadius: 3)
-                                        .foregroundColor(.gray)
-                                        .frame(width: 210, height: 300)
-                                        .position(x: 95, y: 153)
-                                        .padding()
-                                }
-                            }
-                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
-                                ImagePicker2(selectedImage2: $selectedImage2)
-                            }
+//                            Button {
+//                                showImagePicker.toggle()
+//                            } label: {
+//                                if let profileImage = profileImage2 {
+//                                    profileImage
+//                                        .resizable()
+//                                        .frame(width: 210, height: 300)
+//                                        .border(.black)
+//                                        .clipShape(RoundedRectangle(cornerRadius: 3))
+//                                        .position(x: 95, y: 153)
+//                                        .padding()
+//                                } else {
+//                                    RoundedRectangle(cornerRadius: 3)
+//                                        .foregroundColor(.gray)
+//                                        .frame(width: 210, height: 300)
+//                                        .position(x: 95, y: 153)
+//                                        .padding()
+//                                }
+//                            }
+//                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
+//                                ImagePicker2(selectedImage2: $selectedImage2)
+//                            }
                             VStack {
                                 TextField("Add a bio", text: $bio, axis: .vertical)
+                                    .foregroundColor(.black)
                                     .padding()
                             }
                             
@@ -147,19 +145,19 @@ struct EditBusinessView: View {
                         Spacer()
                         
                         
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 3)
-                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
-                                .frame(width: 420, height: 150)
-                            
-                            VStack {
-                                Text("Leave a review!!")
-                                    .foregroundColor(.white)
-                                TextField("", text: $reviews, axis: .vertical)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding()
-                            }
-                        }
+//                        ZStack {
+//                            RoundedRectangle(cornerRadius: 3)
+//                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
+//                                .frame(width: 420, height: 150)
+//
+////                            VStack {
+////                                Text("Leave a review!!")
+////                                    .foregroundColor(.white)
+////                                TextField("", text: $reviews, axis: .vertical)
+////                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+////                                    .padding()
+////                            }
+//                        }
                     }
                 }
 //                .accessibilityAddTraits(.isHeader)
