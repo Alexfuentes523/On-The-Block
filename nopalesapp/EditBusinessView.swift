@@ -31,6 +31,7 @@ struct EditBusinessView: View {
     
     //    TextField Strings
     @State var reviews: String = ""
+    @State var buttonText = ""
     
     
     var body: some View {
@@ -43,22 +44,17 @@ struct EditBusinessView: View {
          VStack {
              
              HStack(alignment: .center, spacing: 50) {
-                 Image(systemName: "plus")
-                     .padding()
-                 
+                
 //                    Nav Link that goes to edit business view
-                 NavigationLink {
-                     EditBusinessView()
-                 } label: {
-                     Text("ON THE BLOCK")
+                 
+                     TextField("Business Name Here", text: $buttonText)
                          .foregroundColor(.black)
                          .font(.headline)
                          .padding()
-                 }
-                
-                 Image(systemName:"magnifyingglass")
-                     .padding()
-                 
+//
+//                 Button(self.buttonText) {
+//
+//                 }
              }
                 
                 ScrollView {
@@ -112,7 +108,7 @@ struct EditBusinessView: View {
                                 }
                             }
                             .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
-                                ImagePicker(selectedImage: $selectedImage2)
+                                ImagePicker2(selectedImage2: $selectedImage2)
                             }
                             VStack {
                                 TextField("Add a bio", text: $bio, axis: .vertical)
@@ -165,21 +161,22 @@ struct EditBusinessView: View {
                             }
                         }
                     }
-                }.accessibilityAddTraits(.isHeader)
-                    .navigationTitle($title)
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        if title.isEmpty || title == " " {
-                            ToolbarItem(placement: .principal) {
-                                Text("Add name here")
-                                    .navigationTitle($title)
-                                    .navigationBarTitleDisplayMode(.inline)
-                                    .font(.largeTitle)
-                                    .accessibilityAddTraits(.isHeader)
-                                
-                            }
-                        }
-                    }
+                }
+//                .accessibilityAddTraits(.isHeader)
+//                    .navigationTitle($title)
+//                    .navigationBarTitleDisplayMode(.inline)
+//                    .toolbar {
+//                        if title.isEmpty || title == " " {
+//                            ToolbarItem(placement: .principal) {
+//                                Text("Add name here")
+//                                    .navigationTitle($title)
+//                                    .navigationBarTitleDisplayMode(.inline)
+//                                    .font(.largeTitle)
+//                                    .accessibilityAddTraits(.isHeader)
+//
+//                            }
+//                        }
+//                    }
             }
         }
     }
