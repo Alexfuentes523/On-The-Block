@@ -49,6 +49,8 @@ struct EditBusinessView: View {
                  
                      TextField("Business Name Here", text: $buttonText)
                      .font(.system(size: 33))
+                     .textFieldStyle(.automatic)
+                     .multilineTextAlignment(.center)
                          .foregroundColor(.black)
                          .font(.headline)
                          .padding()
