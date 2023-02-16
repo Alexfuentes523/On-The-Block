@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BusinessView: View {
     
+    var store:Store
+    
     var eggShell = #colorLiteral(red: 0.9302913547, green: 0.9253246188, blue: 0.916793704, alpha: 1)
     
 //    Map Code
@@ -27,7 +29,7 @@ struct BusinessView: View {
             VStack {
                 
                 HStack(alignment: .center, spacing: 50) {
-                    Text("Dime Store")
+                    Text(store.storeName)
                         .font(.system(size: 33))                        .foregroundColor(.black)
                         .font(.headline)
 //                        .padding()
@@ -39,7 +41,7 @@ struct BusinessView: View {
                     VStack {
                         
                         Spacer()
-                        Image("dime")
+                        Image(store.imageName)
                             .resizable()
                             .frame(width: 420, height: 800)
                             .padding(.bottom)
@@ -113,6 +115,6 @@ struct BusinessView: View {
 }
 struct BusinessView_Previews: PreviewProvider {
     static var previews: some View {
-        BusinessView()
+        BusinessView(store: .example)
     }
 }

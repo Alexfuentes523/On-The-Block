@@ -15,10 +15,10 @@ struct Store: Identifiable {
     
     static let dummyStores = [
         Store(imageName: "entrance", storeName: "Fanus", numberOfStars: 3),
-        Store(imageName: "women", storeName: "Aiya Makeup", numberOfStars: 2),
-        Store(imageName: "dime", storeName: "dimestore", numberOfStars: 2),
-        Store(imageName: "thecity", storeName: "le city", numberOfStars: 4),
-        Store(imageName: "warehouse", storeName: "house of wares", numberOfStars: 5),
+        Store(imageName: "women", storeName: "Aiya Makeup", numberOfStars: 4),
+        Store(imageName: "dime", storeName: "dimestore", numberOfStars: 3),
+        Store(imageName: "thecity", storeName: "The City", numberOfStars: 4),
+        Store(imageName: "warehouse", storeName: "Stussy Detriot", numberOfStars: 5),
         Store(imageName: "nothingstopsdet", storeName: "Midnight Detriot", numberOfStars: 4),
         Store(imageName: "coffeehouse", storeName: "Coffee House", numberOfStars: 5),
         Store(imageName: "storefront3", storeName: "The Strip", numberOfStars: 5),
@@ -27,4 +27,8 @@ struct Store: Identifiable {
 //        Store(imageName: "storefront6", storeName: "Katy's", numberOfStars: 5)
         
     ]
+    
+    static let example =  Store(imageName: "entrance", storeName: "Fanus", numberOfStars: 3)
 }
+
+
