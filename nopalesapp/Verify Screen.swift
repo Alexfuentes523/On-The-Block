@@ -29,50 +29,61 @@ struct VerifyScreenView: View {
                                 Text("Verify Your Business Here")
                                     .font(.system(size: 30))
                                     .foregroundColor(.white)
-                                    .offset(y:65)
+                                    .padding([.top], 80)
+                                    .offset(y:30)
+                                    
+
                                 
                                 Text("Full Name")
-                                    .offset(y:87)
-                                    .padding(-20)
+                                    .padding([.leading],-155)
                                     .foregroundColor(.white)
-                                    .offset(x:-118)
+                                    .offset(y:56)
+                                    
                                 TextField("", text: $FullName)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .padding()
-                                    .offset(y:65)
+                                    .offset(y:30)
+                                  
                                 
                                 Text("Business Name")
-                                    .offset(y:52)
                                     .foregroundColor(.white)
-                                    .offset(x:-98)
+                                    .padding([.horizontal], -155)
+                                    .padding([.vertical])
+                                    .offset(y:2)
+                                    
                                 TextField("", text: $BusinessName)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .padding()
-                                //.font(.headline)
-                                    .offset(y:26)
+                                    .offset(y:-35)
                                 
                                 Text("Business Email")
-                                    .offset(y:14)
-                                    .offset(x:-100)
                                     .foregroundColor(.white)
+                                    .padding([.horizontal], -155)
+                                    .offset(y:-45)
                                 TextField("", text: $BusinessEmail)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .padding()
-                                    .offset(y:-12)
+                                    .offset(y:-70)
                                 
                                 Text("Business Category")
                                     .foregroundColor(.white)
-                                    .offset(y:-25)
-                                    .offset(x:-88)
+                                    .padding([.horizontal], -155)
+                                    .offset(y:-80)
                                 TextField("", text: $BusinessCategory)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .padding()
-                                    .offset(y:-50)
+                                    .offset(y:-105)
                                 
-                                Text("Submit")
-                                    .offset(y:-58)
+                                NavigationLink {
+                                    EditBusinessView ()
+                                } label: {
+                                    Text("Submit")
+                                }
                                     .foregroundColor(.white)
                                     .font(.system(size:35))
+                                    .offset(y:-113)
+                                    .padding([.horizontal])
+                                
                                 
                                 //Spacer()
                             }
