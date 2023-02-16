@@ -7,31 +7,14 @@
 import SwiftUI
 
 struct ContentView: View {
-//    let gridItems = [
-//        CamGridItem(height:450, imgString: "BLM Barber"),
-//        CamGridItem(height:250, imgString: "detroitvseverybody"),
-//        CamGridItem(height:300, imgString: "dime"),
-//        CamGridItem(height:320, imgString: "thecity"),
-//        CamGridItem(height:750, imgString: "warehouse"),
-//        CamGridItem(height:450, imgString: "women"),
-//        CamGridItem(height:450, imgString: "storefront1"),
-//        CamGridItem(height:250, imgString: "storefront2"),
-//        CamGridItem(height:200, imgString: "storefront3"),
-//        CamGridItem(height:220, imgString: "storefront4"),
-//        CamGridItem(height:450, imgString: "storefront5"),
-//        CamGridItem(height:450, imgString: "storefront6")
-//        
-//    ]
+    
+    @State var selected: Store?
+    @State var store:Store
+
+
     var body: some View {
         NavigationView {
             
-        
-            
-//        var gridItems = [GridItem]
-//        for i in 0 ..< 30 {
-//            let randomHeight = CGFloat.random(in: 100 ... 400)
-//            gridItems.append(GridItem(height: randomHeight, title: String(i)))
-//        }
         let eggShell = #colorLiteral(red: 0.9302913547, green: 0.9253246188, blue: 0.916793704, alpha: 1)
         ZStack {
             
@@ -45,7 +28,7 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .padding()
                     
-//                    Nav Link that goes to edit business view
+                    //                    Nav Link that goes to edit business view
                     NavigationLink {
                         EditBusinessView()
                     } label: {
@@ -54,7 +37,7 @@ struct ContentView: View {
                             .font(.headline)
                             .padding()
                     }
-                   
+                    
                     Image(systemName:"magnifyingglass")
                         .foregroundColor(.black)
                         .padding()
@@ -64,10 +47,10 @@ struct ContentView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .center, spacing: 25) {
                         VStack {
-                            Image(systemName: "cup.and.saucer.fill")
+                            Image(systemName: "tshirt.fill")
                                 .foregroundColor(.black)
                                 .padding(0.5) // spacing between the symbol and text
-                            Text("Coffee Shop")
+                            Text("Clothing")
                                 .foregroundColor(.black)
                                 .font(.system(size: 7))
                         }
@@ -138,17 +121,18 @@ struct ContentView: View {
                     
                     
                 }
-                    
+                
+                
+                //business items
                 ScrollView(showsIndicators: false) {
                     CoryGrid()
-                        
-                                        
-
-
+                    
+                    
+                    
+                    
                 }
                 
             }
-            
         }
         
                 }
@@ -157,7 +141,7 @@ struct ContentView: View {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            ContentView(store: .example)
         }
     }
     

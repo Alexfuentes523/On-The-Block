@@ -17,33 +17,59 @@ struct CamGridItem: Identifiable {
 
 struct StoreTile: View {
     
-    let store: Store
+    
+    @State var selected: Store?
+    @State var store:Store
+    let stores = Store.dummyStores
+    
+    // let store: Store
     
     var body: some View {
-        HStack {
-            VStack {
-                Image(store.imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width:50,height:250)
+        
+        ForEach(stores) { store in
+            
+            
+            
+            
+            
+            HStack {
                 
-                    .overlay(alignment: .bottom) {
-                        HStack {
-                            ForEach(0..<store.numberOfStars, id: \.self) {_ in
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
+                
+                NavigationLink {
+                    
+                    BusinessView(store: store)
+                }
+            label: {
+                
+                VStack {
+                    
+                    Image(store.imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:50,height:250)
+                    
+                        .overlay(alignment: .bottom) {
+                            HStack {
+                                ForEach(0..<store.numberOfStars, id: \.self) {_ in
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(.yellow)
+                                }
                             }
                         }
-                    }
-                Text(store.storeName)
+                    Text(store.storeName)
+                    
+                }
                 
                 
             }
-            
-            
+                
+                
+            }
         }
     }
-        }
+}
+    
+
 
 struct CoryGrid: View {
     let stores = Store.dummyStores
@@ -51,6 +77,8 @@ struct CoryGrid: View {
     var body: some View {
         LazyVGrid(columns: columns, spacing: 0) {
             ForEach(stores) { store in
+                
+                
                 StoreTile(store: store)
             }
         }
