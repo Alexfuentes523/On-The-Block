@@ -63,10 +63,11 @@ struct BusinessView: View {
 //                            Image("Rest2")
 //                                .frame(width: 210)
 //                                .padding()
-                           
-                            Text("Dime store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with dimes as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage. ")
+                            Spacer()
+                            Text("This store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with traditional store architecture as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage. ")
                                 .foregroundColor(.black)
                                 .padding(.bottom)
+                            Spacer()
                         }
                         
                         //                    Map View under all business information
