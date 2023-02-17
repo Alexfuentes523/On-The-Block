@@ -61,7 +61,7 @@ struct StoreTile: View {
                 }
                 
                 
-            }
+            }.foregroundColor(.primary)
                 
                 
             }
