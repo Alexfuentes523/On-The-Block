@@ -68,7 +68,7 @@ struct StoreTile: View {
         }
     }
 }
-    
+
 
 
 struct CoryGrid: View {

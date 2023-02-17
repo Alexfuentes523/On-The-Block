@@ -19,6 +19,20 @@ struct BusinessView: View {
 //    TextField Strings
     @State var reviews: String = ""
     
+//    Function that allows apple maps to open from mapkit view
+    func openMaps() {
+        
+        let latitude = 42.3309
+        let longitude = -83.0479
+        
+        let url = URL(string: "maps://?saddr=&daddr=\(latitude),\(longitude)")
+        
+        if UIApplication.shared.canOpenURL(url!) {
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            
+        }
+    }
+    
     var body: some View {
         
         ZStack {
@@ -51,14 +65,20 @@ struct BusinessView: View {
 //                                .padding()
                            
                             Text("Dime store is a store that sells store things for stores that support stores inside of stores, these stores pride themsevles designing their stores with dimes as it represents them as a dime store that supports stores that support outside stores outside of stores inside of bigger stores to store things in storage. ")
+                                .foregroundColor(.black)
                                 .padding(.bottom)
                         }
                         
                         //                    Map View under all business information
-                        Map(coordinateRegion: $region)
-                            .frame(width: 420, height: 180)
-                            .border(.black)
-                            .cornerRadius(8)
+                        Button {
+                            openMaps()
+                        } label: {
+                            Map(coordinateRegion: $region)
+                                .frame(width: 420, height: 180)
+                                .border(.black)
+                                .cornerRadius(8)
+                        }
+                        
                         
                         Divider()
                             .frame(height: 1)
@@ -86,15 +106,16 @@ struct BusinessView: View {
                         Spacer()
                         
                         ZStack {
-                            RoundedRectangle(cornerRadius: 3)
+                            RoundedRectangle(cornerRadius: 8)
                                 .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
-                                .frame(width: 420, height: 150)
+                                .frame(width: 400, height: 150)
                             
                             VStack {
                                 Text("Leave a review!!")
                                     .foregroundColor(.white)
                                 TextField("", text: $reviews, axis: .vertical)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .background(Color.white)
+                                    .frame(width: 330)
                                     .padding()
                             }
                         }
