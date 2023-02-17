@@ -48,10 +48,10 @@ struct EditBusinessView: View {
 //                    Nav Link that goes to edit business view
                  
                      TextField("Business Name Here", text: $buttonText)
+                     .foregroundColor(.black)
                      .font(.system(size: 33))
                      .textFieldStyle(.automatic)
                      .multilineTextAlignment(.center)
-                         .foregroundColor(.black)
                          .font(.headline)
                          .padding()
              }
@@ -117,10 +117,14 @@ struct EditBusinessView: View {
                             
                         }
                         
-                        Map(coordinateRegion: $region)
-                            .frame(width: 420, height: 180)
-                            .border(.black)
-                            .cornerRadius(8)
+                        Button {
+                            openMaps()
+                        } label: {
+                            Map(coordinateRegion: $region)
+                                .frame(width: 420, height: 180)
+                                .border(.black)
+                                .cornerRadius(8)
+                        }
                         
                         Divider()
                             .frame(height: 1)
@@ -190,6 +194,19 @@ struct EditBusinessView: View {
     func loadImage2() {
         guard let selectedImage = selectedImage2 else { return }
         profileImage2 = Image(uiImage: selectedImage)
+    }
+    
+    func openMaps() {
+        
+        let latitude = 42.3309
+        let longitude = -83.0479
+        
+        let url = URL(string: "maps://?saddr=&daddr=\(latitude),\(longitude)")
+        
+        if UIApplication.shared.canOpenURL(url!) {
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            
+        }
     }
     
 }
