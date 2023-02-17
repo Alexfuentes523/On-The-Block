@@ -84,6 +84,7 @@ struct BusinessView: View {
                         Divider()
                             .frame(height: 1)
                             .overlay(.primary)
+                            .padding(.top)
                         
                         //                    Hyperlinks under map in an HStack
                         HStack {
@@ -96,14 +97,15 @@ struct BusinessView: View {
                                     .padding()
                             })
                             //                        Share symbol
-                            ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
+                            ShareLink(item: URL(string: "https://www.eatdimestore.com")!)
                                 .frame(width: 175, height: 70)
                                 .foregroundColor(.primary)
-                        }
+                        } .padding(.top)
                         
                         Divider()
                             .frame(height: 1)
                             .overlay(.primary)
+                            .padding(.top)
                         Spacer()
                         
                         ZStack {
@@ -119,7 +121,7 @@ struct BusinessView: View {
                                     .frame(width: 330)
                                     .padding()
                             }
-                        }
+                        } .padding(.top)
                     }
                 }
 //                .navigationBarTitle("On The Block", displayMode: .inline)
