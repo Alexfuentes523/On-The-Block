@@ -37,14 +37,14 @@ struct BusinessView: View {
         
         ZStack {
             
-            Color(eggShell)
+            Color("mainColor")
                 .ignoresSafeArea()
             
             VStack {
                 
                 HStack(alignment: .center, spacing: 50) {
                     Text(store.storeName)
-                        .font(.system(size: 33))                        .foregroundColor(.black)
+                        .font(.system(size: 33))                        .foregroundColor(.primary)
                         .font(.headline)
 //                        .padding()
                 }
@@ -65,7 +65,7 @@ struct BusinessView: View {
 //                                .padding()
                             Spacer()
                             Text(store.storeBio)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                                 .padding(.bottom)
                             Spacer()
                         }
@@ -83,7 +83,7 @@ struct BusinessView: View {
                         
                         Divider()
                             .frame(height: 1)
-                            .overlay(.black)
+                            .overlay(.primary)
                         
                         //                    Hyperlinks under map in an HStack
                         HStack {
@@ -92,18 +92,18 @@ struct BusinessView: View {
                                 Image(systemName: "network")
                                     .resizable()
                                     .frame(width: 70, height: 70)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                                     .padding()
                             })
                             //                        Share symbol
                             ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
                                 .frame(width: 175, height: 70)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                         }
                         
                         Divider()
                             .frame(height: 1)
-                            .overlay(.black)
+                            .overlay(.primary)
                         Spacer()
                         
                         ZStack {

@@ -38,7 +38,7 @@ struct EditBusinessView: View {
         
         ZStack {
             
-            Color(eggShell)
+            Color("mainColor")
                 .ignoresSafeArea()
             
          VStack {
@@ -48,7 +48,7 @@ struct EditBusinessView: View {
 //                    Nav Link that goes to edit business view
                  
                      TextField("Business Name Here", text: $buttonText)
-                     .foregroundColor(.black)
+                     .foregroundColor(.primary)
                      .font(.system(size: 33))
                      .textFieldStyle(.automatic)
                      .multilineTextAlignment(.center)
@@ -111,7 +111,7 @@ struct EditBusinessView: View {
 //                            }
                             VStack {
                                 TextField("Add a bio", text: $bio, axis: .vertical)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                                     .padding()
                             }
                             
@@ -128,7 +128,7 @@ struct EditBusinessView: View {
                         
                         Divider()
                             .frame(height: 1)
-                            .overlay(.black)
+                            .overlay(.primary)
                         
                         HStack {
                             //                        Globe symbol
@@ -136,18 +136,18 @@ struct EditBusinessView: View {
                                 Image(systemName: "network")
                                     .resizable()
                                     .frame(width: 70, height: 70)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                                     .padding()
                             })
                             //                        Share symbol
                             ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
                                 .frame(width: 175, height: 70)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                         }
                         
                         Divider()
                             .frame(height: 1)
-                            .overlay(.black)
+                            .overlay(.primary)
                         Spacer()
                         
                         
