@@ -47,18 +47,11 @@ struct ContentView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .center, spacing: 25) {
                             VStack {
+                                
                                 Image(systemName: "tshirt.fill")
                                     .foregroundColor(.black)
                                     .padding(0.5) // spacing between the symbol and text
                                 Text("Clothing")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 7))
-                            }
-                            VStack {
-                                Image(systemName: "cup.and.saucer.fill")
-                                    .foregroundColor(.black)
-                                    .padding(0.5) // spacing between the symbol and text
-                                Text("Coffee Shop")
                                     .foregroundColor(.black)
                                     .font(.system(size: 7))
                             }
