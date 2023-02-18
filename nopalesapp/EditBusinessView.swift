@@ -56,6 +56,7 @@ struct EditBusinessView: View {
                         .multilineTextAlignment(.center)
                         .font(.headline)
                         .padding()
+                        .focused($isInputActive)
                 }
                 
                 ScrollView {
