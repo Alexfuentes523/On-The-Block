@@ -33,6 +33,9 @@ struct BusinessView: View {
         }
     }
     
+//    Keyboard Done button
+    @FocusState var isInputActive: Bool
+    
     var body: some View {
         
         ZStack {
@@ -118,8 +121,18 @@ struct BusinessView: View {
                                     .foregroundColor(.white)
                                 TextField("", text: $reviews, axis: .vertical)
                                     .background(Color.white)
+                                    .foregroundColor(.black)
                                     .frame(width: 330)
                                     .padding()
+                                    .toolbar {
+                                        ToolbarItemGroup(placement: .keyboard) {
+                                            Spacer()
+                                            
+                                            Button("Done") {
+                                                isInputActive = false
+                                            }
+                                        }
+                                    }
                             }
                         } .padding(.top)
                     }
