@@ -124,6 +124,7 @@ struct BusinessView: View {
                                     .foregroundColor(.black)
                                     .frame(width: 330)
                                     .padding()
+                                    .focused($isInputActive)
                                     .toolbar {
                                         ToolbarItemGroup(placement: .keyboard) {
                                             Spacer()

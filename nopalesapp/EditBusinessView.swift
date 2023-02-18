@@ -115,6 +115,7 @@ struct EditBusinessView: View {
                                 TextField("Add a bio", text: $bio, axis: .vertical)
                                     .foregroundColor(.primary)
                                     .padding()
+                                    .focused($isInputActive)
                                     .toolbar {
                                         ToolbarItemGroup(placement: .keyboard) {
                                             Spacer()
