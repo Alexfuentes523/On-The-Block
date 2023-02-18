@@ -33,7 +33,9 @@ struct EditBusinessView: View {
     @State var reviews: String = ""
     @State var buttonText = ""
     
-    
+//    Keyboard Done button
+    @FocusState var isInputActive: Bool
+
     var body: some View {
         
         ZStack {
@@ -41,20 +43,20 @@ struct EditBusinessView: View {
             Color("mainColor")
                 .ignoresSafeArea()
             
-         VStack {
-             
-             HStack(alignment: .center, spacing: 50) {
+            VStack {
                 
-//                    Nav Link that goes to edit business view
-                 
-                     TextField("Business Name Here", text: $buttonText)
-                     .foregroundColor(.primary)
-                     .font(.system(size: 33))
-                     .textFieldStyle(.automatic)
-                     .multilineTextAlignment(.center)
-                         .font(.headline)
-                         .padding()
-             }
+                HStack(alignment: .center, spacing: 50) {
+                    
+                    //                    Nav Link that goes to edit business view
+                    
+                    TextField("Business Name Here", text: $buttonText)
+                        .foregroundColor(.primary)
+                        .font(.system(size: 33))
+                        .textFieldStyle(.automatic)
+                        .multilineTextAlignment(.center)
+                        .font(.headline)
+                        .padding()
+                }
                 
                 ScrollView {
                     
@@ -87,34 +89,42 @@ struct EditBusinessView: View {
                         //                    Second Image Picker Button // makes second photo editable
                         HStack {
                             
-//                            Button {
-//                                showImagePicker.toggle()
-//                            } label: {
-//                                if let profileImage = profileImage2 {
-//                                    profileImage
-//                                        .resizable()
-//                                        .frame(width: 210, height: 300)
-//                                        .border(.black)
-//                                        .clipShape(RoundedRectangle(cornerRadius: 3))
-//                                        .position(x: 95, y: 153)
-//                                        .padding()
-//                                } else {
-//                                    RoundedRectangle(cornerRadius: 3)
-//                                        .foregroundColor(.gray)
-//                                        .frame(width: 210, height: 300)
-//                                        .position(x: 95, y: 153)
-//                                        .padding()
-//                                }
-//                            }
-//                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
-//                                ImagePicker2(selectedImage2: $selectedImage2)
-//                            }
+                            //                            Button {
+                            //                                showImagePicker.toggle()
+                            //                            } label: {
+                            //                                if let profileImage = profileImage2 {
+                            //                                    profileImage
+                            //                                        .resizable()
+                            //                                        .frame(width: 210, height: 300)
+                            //                                        .border(.black)
+                            //                                        .clipShape(RoundedRectangle(cornerRadius: 3))
+                            //                                        .position(x: 95, y: 153)
+                            //                                        .padding()
+                            //                                } else {
+                            //                                    RoundedRectangle(cornerRadius: 3)
+                            //                                        .foregroundColor(.gray)
+                            //                                        .frame(width: 210, height: 300)
+                            //                                        .position(x: 95, y: 153)
+                            //                                        .padding()
+                            //                                }
+                            //                            }
+                            //                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage2) {
+                            //                                ImagePicker2(selectedImage2: $selectedImage2)
+                            //                            }
                             VStack {
                                 TextField("Add a bio", text: $bio, axis: .vertical)
                                     .foregroundColor(.primary)
                                     .padding()
+                                    .toolbar {
+                                        ToolbarItemGroup(placement: .keyboard) {
+                                            Spacer()
+                                            
+                                            Button("Done") {
+                                                isInputActive = false
+                                            }
+                                        }
+                                    }
                             }
-                            
                         }
                         
                         Button {
@@ -129,6 +139,7 @@ struct EditBusinessView: View {
                         Divider()
                             .frame(height: 1)
                             .overlay(.primary)
+                            .padding(.top)
                         
                         HStack {
                             //                        Globe symbol
@@ -143,44 +154,46 @@ struct EditBusinessView: View {
                             ShareLink(item: /*@START_MENU_TOKEN@*/URL(string: "https://developer.apple.com/xcode/swiftui")!/*@END_MENU_TOKEN@*/)
                                 .frame(width: 175, height: 70)
                                 .foregroundColor(.primary)
-                        }
+                        }         .padding(.top)
                         
                         Divider()
                             .frame(height: 1)
                             .overlay(.primary)
+                            .padding(.top)
+                        
                         Spacer()
                         
                         
-//                        ZStack {
-//                            RoundedRectangle(cornerRadius: 3)
-//                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
-//                                .frame(width: 420, height: 150)
-//
-////                            VStack {
-////                                Text("Leave a review!!")
-////                                    .foregroundColor(.white)
-////                                TextField("", text: $reviews, axis: .vertical)
-////                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-////                                    .padding()
-////                            }
-//                        }
+                        //                        ZStack {
+                        //                            RoundedRectangle(cornerRadius: 3)
+                        //                                .fill((Color(red: 0.211, green: 0.138, blue: 0.095)))
+                        //                                .frame(width: 420, height: 150)
+                        //
+                        ////                            VStack {
+                        ////                                Text("Leave a review!!")
+                        ////                                    .foregroundColor(.white)
+                        ////                                TextField("", text: $reviews, axis: .vertical)
+                        ////                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                        ////                                    .padding()
+                        ////                            }
+                        //                        }
                     }
                 }
-//                .accessibilityAddTraits(.isHeader)
-//                    .navigationTitle($title)
-//                    .navigationBarTitleDisplayMode(.inline)
-//                    .toolbar {
-//                        if title.isEmpty || title == " " {
-//                            ToolbarItem(placement: .principal) {
-//                                Text("Add name here")
-//                                    .navigationTitle($title)
-//                                    .navigationBarTitleDisplayMode(.inline)
-//                                    .font(.largeTitle)
-//                                    .accessibilityAddTraits(.isHeader)
-//
-//                            }
-//                        }
-//                    }
+                //                .accessibilityAddTraits(.isHeader)
+                //                    .navigationTitle($title)
+                //                    .navigationBarTitleDisplayMode(.inline)
+                //                    .toolbar {
+                //                        if title.isEmpty || title == " " {
+                //                            ToolbarItem(placement: .principal) {
+                //                                Text("Add name here")
+                //                                    .navigationTitle($title)
+                //                                    .navigationBarTitleDisplayMode(.inline)
+                //                                    .font(.largeTitle)
+                //                                    .accessibilityAddTraits(.isHeader)
+                //
+                //                            }
+                //                        }
+                //                    }
             }
         }
     }
