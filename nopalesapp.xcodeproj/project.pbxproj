@@ -22,6 +22,8 @@
 		9D61946F299D43670008114B /* ImagePicker2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61946E299D43670008114B /* ImagePicker2.swift */; };
 		9DB669962992B2F60024B5B7 /* EditBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB669952992B2F60024B5B7 /* EditBusinessView.swift */; };
 		9DB669982993EA140024B5B7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB669972993EA140024B5B7 /* ImagePicker.swift */; };
+		ABB7942629A3DAD90008102D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7942529A3DAD90008102D /* Data.swift */; };
+		ABB7942829A3DAF60008102D /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7942729A3DAF60008102D /* SearchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		9D61946E299D43670008114B /* ImagePicker2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker2.swift; sourceTree = "<group>"; };
 		9DB669952992B2F60024B5B7 /* EditBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessView.swift; sourceTree = "<group>"; };
 		9DB669972993EA140024B5B7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		ABB7942529A3DAD90008102D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ABB7942729A3DAF60008102D /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 		1F35B7F329895AAD00772065 /* nopalesapp */ = {
 			isa = PBXGroup;
 			children = (
+				ABB7942529A3DAD90008102D /* Data.swift */,
+				ABB7942729A3DAF60008102D /* SearchScreenView.swift */,
 				1F35B7F429895AAD00772065 /* nopalesappApp.swift */,
 				1F35B7F629895AAD00772065 /* ContentView.swift */,
 				090927D32995364D00D718FF /* Verify Screen.swift */,
@@ -296,8 +302,10 @@
 				090927D42995364D00D718FF /* Verify Screen.swift in Sources */,
 				9DB669962992B2F60024B5B7 /* EditBusinessView.swift in Sources */,
 				9DB669982993EA140024B5B7 /* ImagePicker.swift in Sources */,
+				ABB7942629A3DAD90008102D /* Data.swift in Sources */,
 				09E9C2C0298D4F1300B58776 /* Button Screen.swift in Sources */,
 				1F35B7F529895AAD00772065 /* nopalesappApp.swift in Sources */,
+				ABB7942829A3DAF60008102D /* SearchScreenView.swift in Sources */,
 				1FBBD4C3299BE6F80008457E /* StoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
